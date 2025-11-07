@@ -306,6 +306,8 @@ class Frame:
         """
 
         n["ref"] = None
+        n["ref_type"] = 2.3  # default value so that the column always exists
+        ref_edges = e[e["ref"].notna()]
         ref_edges = e[e["ref"].notna()]
 
         for idx, node in n.iterrows():
